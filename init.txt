@@ -1,0 +1,19 @@
+mysql-ctl start;
+mysql-ctl cli;
+
+
+SHOW DATABASES;
+CREATE DATABASE boo;
+
+
+apt install nano
+nano /etc/mysql/mysql.conf.d/mysqld.cnf
+
+
+CREATE USER 'peter'@'%' IDENTIFIED BY 'abcd1234#';
+GRANT ALL PRIVILEGES ON *.* TO 'peter'@'%';
+
+SELECT * FROM mysql.user;
+quit;
+
+mysql-ctl restart 
